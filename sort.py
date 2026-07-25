@@ -4,7 +4,10 @@
 #
 # I think we have to remember several key ideas
 #
-# First, we partition the array into a left subarray, a pivot, and a right subarray, where every element in the left subarray is less than or equal to the pivot, and every element in the right subarray is greater than the pivot, and you do this over and over again, recursively
+# First, we partition the array into a left subarray, a pivot, and a right subarray,
+# where every element in the left subarray is less than or equal to the pivot,
+# and every element in the right subarray is greater than the pivot,
+# and we do this over and over again, recursively
 #
 # Second, we use variables i and j for swapping
 #
