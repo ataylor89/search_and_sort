@@ -40,3 +40,15 @@ def partition(arr, low, high):
     # every element from index i + 2 to index high is greater than our pivot,
     # and our pivot is stored at index i + 1
     return i + 1
+
+# We are going to include a simpler, less efficient sorting algorithm for comparison
+def simplesort(arr):
+    minindex = 0
+    start = 0
+    end = len(arr)
+    while start < end:
+        for i in range(start, end):
+            if arr[i] < arr[minindex]:
+                minindex = i
+        arr[start], arr[minindex] = arr[minindex], arr[start]
+        start += 1
