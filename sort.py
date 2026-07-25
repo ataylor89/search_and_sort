@@ -9,7 +9,7 @@ def partition(arr, low, high):
     i = low - 1
     for j in range(low, high):
         # If you can swap it, you swap it
-        # That is, if you can swap the elements at indices i and j, swap them
+        # That is, if you can swap the elements at indices i and j, you swap them
         if arr[j] <= pivot:
             i += 1
             arr[i], arr[j] = arr[j], arr[i]
