@@ -7,7 +7,7 @@ def quicksort(arr, low, high):
 def partition(arr, low, high):
     # We are partitioning the [low, high] portion of the array into a
     # [low, i] portion and an [i+2, high] portion,
-    # since the pivot will finally be swapped with the element at index i+1
+    # since the pivot will eventually be swapped with the element at index i+1
     pivot = arr[high]
     i = low - 1
     for j in range(low, high):
