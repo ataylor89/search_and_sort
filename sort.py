@@ -1,3 +1,19 @@
+# How can we remember the quicksort implementation?
+#
+# How can we produce it on demand many months or many years after we learn it?
+#
+# I think we have to remember several key ideas
+#
+# First, we partition the array into a left subarray, a pivot, and a right subarray, where every element in the left subarray is less than or equal to the pivot, and every element in the right subarray is greater than the pivot, and you do this over and over again, recursively
+#
+# Second, we use variables i and j for swapping
+#
+# Third, we initialize variable i to low - 1
+#
+# Fourth, j is the loop variable, and we loop from low to high
+#
+# Fifth, we increment i before every swap
+
 def quicksort(arr, low, high):
     if low < high:
         pivot = partition(arr, low, high)
