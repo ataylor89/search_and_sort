@@ -26,8 +26,8 @@ def quicksort(arr, low, high):
         quicksort(arr, pivot + 1, high)
 
 def partition(arr, low, high):
-    pivot = arr[high]
     i = low - 1
+    pivot = arr[high]
     for j in range(low, high):
         # If you can swap it, you swap it
         if arr[j] <= pivot:
