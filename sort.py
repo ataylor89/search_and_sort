@@ -17,5 +17,5 @@ def partition(arr, low, high):
     arr[i + 1], arr[high] = arr[high], arr[i + 1]
     # Now, every element from index low to index i is less than or equal to our pivot,
     # every element from index i + 2 to index high is greater than our pivot,
-    # and our pivot is stored at index i + 1, creating the partition we want
+    # and our pivot is stored at index i + 1
     return i + 1
