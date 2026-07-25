@@ -2,7 +2,7 @@
 #
 # How can we produce it on demand many months or many years after we learn it?
 #
-# I think we have to remember several key ideas
+# I think it helps to remember several key ideas
 #
 # First, we partition the array into a left subarray, a pivot, and a right subarray,
 # where every element in the left subarray is less than or equal to the pivot,
