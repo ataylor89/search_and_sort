@@ -1,4 +1,4 @@
-# How can we remember the quicksort implementation?
+# How can we remember the implementation of the quicksort algorithm?
 #
 # How can we produce it on demand many months or many years after we learn it?
 #
