@@ -16,5 +16,5 @@ def partition(arr, low, high):
     # (Substitute low - 1 + n for i where n is the number of swaps we performed)
     arr[i + 1], arr[high] = arr[high], arr[i + 1]
     # Now, every element from index low to index i is less than or equal to our pivot,
-    # and every element from index i+2 to index high is greater than our pivot
+    # and every element from index i + 2 to index high is greater than our pivot
     return i + 1
