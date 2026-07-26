@@ -33,4 +33,5 @@ if __name__ == '__main__':
     test(3, 0, 1000, 1000, newline=True)
     test(4, 0, 1e4, 1e4, newline=True)
     test(5, 0, 2e4, 2e4, newline=True)
-    test(6, 0, 1e5, 1e5, ss=False)
+    test(6, 0, 3e4, 3e4, newline=True)
+    test(7, 0, 1e5, 1e5, ss=False)
