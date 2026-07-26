@@ -36,4 +36,7 @@ if __name__ == '__main__':
     test(4, 0, 1e4, 1e4, newline=True)
     test(5, 0, 2e4, 2e4, newline=True)
     test(6, 0, 3e4, 3e4, newline=True)
-    test(7, 0, 1e5, 1e5, ss=False)
+    test(7, 0, 4e4, 4e4, newline=True)
+    test(8, 0, 5e4, 5e4, newline=True)
+    test(9, 0, 1e5, 1e5, ss=False, newline=True)
+    test(10, 0, 1e6, 1e6, ss=False)
