@@ -24,6 +24,8 @@ def test(r, a, b, n, qs=True, ss=True, show=False, newline=False):
         if show:
             print('Simplesort result: %s' %arr2)
         print(f'Simplesort execution time: {simplesort_time:.6f} seconds')
+    if qs and ss:
+        assert arr1 == arr2
     if newline:
         print('')
 
