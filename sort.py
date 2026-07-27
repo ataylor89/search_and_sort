@@ -18,12 +18,16 @@
 # and the reason we use high - 1 is that arr[high] is initially our pivot
 #
 # Fifth, we increment i before every swap
+#
+# Sixth, the quicksort method is recursive,
+# and the base case for terminating the recursion is low >= high
+# (Alternately, the recursive case is low < high)
 
 def quicksort(arr, low, high):
     if low < high:
-        pivot = partition(arr, low, high)
-        quicksort(arr, low, pivot - 1)
-        quicksort(arr, pivot + 1, high)
+        pivot_index = partition(arr, low, high)
+        quicksort(arr, low, pivot_index - 1)
+        quicksort(arr, pivot_index + 1, high)
 
 def partition(arr, low, high):
     i = low - 1
