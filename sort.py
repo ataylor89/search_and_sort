@@ -21,7 +21,7 @@
 #
 # Sixth, the quicksort method is recursive,
 # and the base case for terminating the recursion is low >= high
-# (Alternately, the recursive case is low < high)
+# (Alternatively, the recursive case is low < high)
 
 def quicksort(arr, low, high):
     if low < high:
