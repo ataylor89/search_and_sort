@@ -47,12 +47,9 @@ def partition(arr, low, high):
 
 # We are going to include a simpler, less efficient sorting algorithm for comparison
 def simplesort(arr):
-    start = 0
-    end = len(arr)
-    while start < end:
-        minindex = start
-        for i in range(start + 1, end):
-            if arr[i] < arr[minindex]:
-                minindex = i
-        arr[start], arr[minindex] = arr[minindex], arr[start]
-        start += 1
+    for i in range(len(arr)):
+        target = i
+        for j in range(i + 1, len(arr)):
+            if arr[j] < arr[target]:
+                target = j
+        arr[i], arr[target] = arr[target], arr[i]
