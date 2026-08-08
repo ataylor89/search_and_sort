@@ -13,9 +13,8 @@
 #
 # Third, we initialize variable i to low - 1
 #
-# Fourth, j is the loop variable, and we loop from low to high - 1,
-# which is equivalent to range(low, high) in Python,
-# and the reason we use high - 1 is that arr[high] is initially our pivot
+# Fourth, j is the loop variable, and we loop from low to high,
+# which is equivalent to range(low, high + 1) in Python
 #
 # Fifth, we increment i before every swap
 #
