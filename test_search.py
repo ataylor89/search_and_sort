@@ -1,12 +1,12 @@
 from sort import quicksort
-from search import linear_search
-from search import iterative_binary_search
-from search import recursive_binary_search
+from search import linearsearch
+from search import binarysearch
+from search import rbinarysearch
 
 def test(arr, target):
-    result1 = linear_search(arr, target)
-    result2 = iterative_binary_search(arr, target)
-    result3 = recursive_binary_search(arr, target, 0, len(arr) - 1)
+    result1 = linearsearch(arr, target)
+    result2 = binarysearch(arr, target)
+    result3 = rbinarysearch(arr, target, 0, len(arr) - 1)
     if result1 >= 0 and result1 == result2 == result3:
         print('Target value %d was found in the array at index %d' %(target, result1))
     else:
