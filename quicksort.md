@@ -8,7 +8,7 @@ You can find the July 1961 publication here: [https://dl.acm.org/doi/epdf/10.114
 
 You can find the January 1962 publication here: [https://www.cs.ox.ac.uk/files/6226/H2006%20-%20Historic%20Quicksort.pdf](https://www.cs.ox.ac.uk/files/6226/H2006%20-%20Historic%20Quicksort.pdf).
 
-(Also, here: [https://academic.oup.com/comjnl/article/5/1/10/395338](https://academic.oup.com/comjnl/article/5/1/10/395338]).
+(Also, here: [https://academic.oup.com/comjnl/article/5/1/10/395338](https://academic.oup.com/comjnl/article/5/1/10/395338]).)
 
 I wrote an implementation of the algorithm and pushed it to one of my Github repositories.
 
