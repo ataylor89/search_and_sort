@@ -1,27 +1,49 @@
 from sort import quicksort
-from search import linearsearch
-from search import binarysearch
-from search import rbinarysearch
+from search import linearsearch, binarysearch
+from time import perf_counter
+from random import randint
 
-def test(arr, target):
-    result1 = linearsearch(arr, target)
-    result2 = binarysearch(arr, target)
-    result3 = rbinarysearch(arr, target, 0, len(arr) - 1)
-    if result1 >= 0 and result1 == result2 == result3:
-        print('Target value %d was found in the array at index %d' %(target, result1))
-    else:
-        print('Target value %d was not found in the array (res1 = %d, res2 = %d, res3 = %d)' %(target, result1, result2, result3))
+def test(r, a, b, n, ls=True, bs=True, sl=False, nl=False):
+    print('Round %d (a=%d b=%d n=%d)' %(r, a, b, n))
+    a, b, n = int(a), int(b), int(n)
+    arr = [randint(a, b) for i in range(n)]
+    target = randint(a, b)
+    if sl:
+        print('Unsorted list: %s' %arr)
+    cpy = arr.copy()
+    quicksort(arr, 0, len(arr) - 1)
+    assert arr == sorted(cpy)
+    if sl:
+        print('Sorted list: %s' %arr)
+    if ls:
+        start_time = perf_counter()
+        ls_result = linearsearch(arr, target)
+        ls_time = perf_counter() - start_time
+        if ls_result >= 0:
+            print(f'Linear search: Found {target} at index {ls_result}. Search time: {ls_time:.6f} seconds.')
+        else:
+            print(f'Linear search: {target} not found. Search time: {ls_time:.6f} seconds.')
+    if bs:
+        start_time = perf_counter()
+        bs_result = binarysearch(arr, target)
+        bs_time = perf_counter() - start_time
+        if bs_result >= 0:
+            print(f'Binary search: Found {target} at index {bs_result}. Search time: {bs_time:.6f} seconds.')
+        else:
+            print(f'Binary search: {target} not found. Search time: {bs_time:.6f} seconds.')
+    if ls and bs:
+        assert (ls_result ^ bs_result) >= 0, f'ls_result={ls_result} and bs_result={bs_result} have different signs'
+    if nl:
+        print('')
 
 if __name__ == '__main__':
-    # Let's do some tests
-    arr = [1, 8, 6, 3, 5, 9, 0, 2, 4, 5, 9, 11, 12, 14, 10]
-    print('Unsorted list: %s' %arr)
-    quicksort(arr, 0, len(arr) - 1)
-    print('Sorted list: %s' %arr)
-    test(arr, 0)
-    test(arr, 1)
-    test(arr, 6)
-    test(arr, 12)
-    test(arr, 14)
-    test(arr, 15)
-    test(arr, 16)
+    test(1, 0, 100, 100, nl=True)
+    test(2, 0, 100, 100, nl=True)
+    test(3, 0, 1000, 1000, nl=True)
+    test(4, 0, 1000, 1000, nl=True)
+    test(5, 0, 1e4, 1000, nl=True)
+    test(6, 0, 1e4, 1000, nl=True)
+    test(7, 0, 1e5, 1000, nl=True)
+    test(8, 0, 1e5, 1e4, nl=True)
+    test(9, 0, 1e6, 1e4, nl=True)
+    test(10, 0, 1e6, 1e5)
