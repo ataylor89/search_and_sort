@@ -25,7 +25,7 @@ def test(r, a, b, n, qs=True, ss=True, sl=False, nl=False):
             print('Simplesort result: %s' %arr2)
         print(f'Simplesort execution time: {simplesort_time:.6f} seconds')
     if qs and ss:
-        assert arr1 == arr2
+        assert arr1 == arr2, 'The quicksort and simplesort results don\'t match'
     if nl:
         print('')
 
