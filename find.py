@@ -7,8 +7,8 @@
 # The find algorithm can be used to find the median value in an unsorted list
 # It can also be used to find quartiles
 #
-# Of course we could just sort the list with quicksort and then find the median and the quartiles...
-# But it's slightly more efficent to use quickselect, since the list doesn't need to be fully sorted for this purpose
+# Of course we could just sort the list with quicksort and then retrieve the median or one of the quartiles
+# But it's slightly more efficient to use quickselect, since the list doesn't need to be fully sorted for this purpose
 
 def quickselect(arr, k, low, high):
     i = partition(arr, low, high)
