@@ -11,15 +11,13 @@
 # But it's slightly more efficent to use quickselect, since the list doesn't need to be fully sorted for this purpose
 
 def quickselect(arr, k, low, high):
-    if low < high:
-        i = partition(arr, low, high)
-        if k == i:
-            return arr[k]
-        elif k < i:
-            return quickselect(arr, k, low, i - 1)
-        else:
-            return quickselect(arr, k, i + 1, high)
-    return arr[k]
+    i = partition(arr, low, high)
+    if k == i:
+        return arr[k]
+    elif k < i:
+        return quickselect(arr, k, low, i - 1)
+    else:
+        return quickselect(arr, k, i + 1, high)
 
 def partition(arr, low, high):
     i = low - 1
