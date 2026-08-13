@@ -1,3 +1,15 @@
+# The find algorithm (also known as quickselect) is closely related to quicksort
+# It finds the kth smallest element in an unsorted list
+#
+# It's actually faster to use the quickselect algorithm, than to use quicksort and return arr[k]
+# This is because the list doesn't have to be fully sorted in order to retrieve the kth smallest element in the list
+#
+# The find algorithm can be used to find the median value in an unsorted list
+# It can also be used to find quartiles
+#
+# Of course we could just sort the list with quicksort and then find the median and the quartiles...
+# But it's slightly more efficent to use quickselect, since the list doesn't need to be fully sorted for this purpose
+
 def quickselect(arr, k, low, high):
     if low < high:
         i = partition(arr, low, high)
