@@ -13,13 +13,13 @@ def test(r, a, b, n, sl=False, nl=False):
     low, high = 0, len(arr) - 1
     start_time = perf_counter()
     median1 = quickselect(cpy1, n // 2, low, high)
-    quickselect_time = perf_counter() - start_time
-    print(f'Quickselect result. Median: {median1} Time elapsed: {quickselect_time:.6f} seconds')
+    time1 = perf_counter() - start_time
+    print(f'Quickselect result. Median: {median1} Time elapsed: {time1:.6f} seconds')
     start_time = perf_counter()
     quicksort(cpy2, low, high)
     median2 = cpy2[n // 2]
-    quicksort_time = perf_counter() - start_time
-    print(f'Quicksort result. Median: {median2} Time elapsed: {quicksort_time:.6f} seconds')
+    time2 = perf_counter() - start_time
+    print(f'Quicksort result. Median: {median2} Time elapsed: {time2:.6f} seconds')
     assert median1 == median2, 'The results from quickselect and quicksort do not match'
     if nl:
         print('')
